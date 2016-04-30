@@ -109,7 +109,8 @@ typedef void (^CCNStatusItemWindowAnimationCompletion)(void);
     [self updateWindowFrame];
     [self.window setAlphaValue:0.0];
     [self showWindow:nil];
-
+    [NSApp activateIgnoringOtherApps:YES];
+    
     [self animateWindow:(CCNStatusItemWindow *)self.window withFadeDirection:CCNFadeDirectionFadeIn];
 }
 
